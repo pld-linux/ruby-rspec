@@ -2,7 +2,7 @@
 Summary:	Behaviour driven development (BDD) framework for Ruby
 Name:		ruby-%{gem_name}
 Version:	2.13.0
-Release:	1
+Release:	2
 License:	MIT
 Group:		Development/Languages
 Source0:	http://rubygems.org/downloads/%{gem_name}-%{version}.gem
