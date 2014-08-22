@@ -1,5 +1,6 @@
 %define	gem_name rspec
 Summary:	Behaviour driven development (BDD) framework for Ruby
+Summary(pl.UTF-8):	Szkielet do programowania sterowanego zachowaniem (BDD) dla języka Ruby
 Name:		ruby-%{gem_name}
 Version:	2.13.0
 Release:	2
@@ -18,6 +19,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 RSpec is a behaviour driven development (BDD) framework for Ruby.
+
+%description -l pl.UTF-8
+RSpec to szkielet do programowania sterowanego zachowaniem (BDD -
+Behaviour Driven Development) dla języka Ruby.
 
 %prep
 %setup -q -n %{gem_name}-%{version}
