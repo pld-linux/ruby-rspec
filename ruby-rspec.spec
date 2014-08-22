@@ -39,4 +39,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README.md License.txt
 %{ruby_vendorlibdir}/rspec.rb
-%{ruby_vendorlibdir}/rspec
+%{ruby_vendorlibdir}/rspec/version.rb
