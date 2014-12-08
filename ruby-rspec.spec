@@ -1,12 +1,12 @@
-%define	gem_name rspec
+%define	pkgname rspec
 Summary:	Behaviour driven development (BDD) framework for Ruby
 Summary(pl.UTF-8):	Szkielet do programowania sterowanego zachowaniem (BDD) dla języka Ruby
-Name:		ruby-%{gem_name}
+Name:		ruby-%{pkgname}
 Version:	2.13.0
-Release:	2
+Release:	3
 License:	MIT
 Group:		Development/Languages
-Source0:	http://rubygems.org/downloads/%{gem_name}-%{version}.gem
+Source0:	http://rubygems.org/downloads/%{pkgname}-%{version}.gem
 # Source0-md5:	72bb51053e955418b9e06818729ab164
 URL:		http://rspec.info/
 BuildRequires:	rpm-rubyprov
@@ -25,12 +25,17 @@ RSpec to szkielet do programowania sterowanego zachowaniem (BDD -
 Behaviour Driven Development) dla języka Ruby.
 
 %prep
-%setup -q -n %{gem_name}-%{version}
+%setup -q -n %{pkgname}-%{version}
+
+%build
+# write .gemspec
+%__gem_helper spec
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{ruby_vendorlibdir}
+install -d $RPM_BUILD_ROOT{%{ruby_vendorlibdir},%{ruby_specdir}}
 cp -a lib/* $RPM_BUILD_ROOT%{ruby_vendorlibdir}
+cp -p %{pkgname}-%{version}.gemspec $RPM_BUILD_ROOT%{ruby_specdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -40,3 +45,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc README.md License.txt
 %{ruby_vendorlibdir}/rspec.rb
 %{ruby_vendorlibdir}/rspec/version.rb
+%{ruby_specdir}/%{pkgname}-%{version}.gemspec
