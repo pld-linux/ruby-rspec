@@ -3,7 +3,7 @@ Summary:	Behaviour driven development (BDD) framework for Ruby
 Summary(pl.UTF-8):	Szkielet do programowania sterowanego zachowaniem (BDD) dla języka Ruby
 Name:		ruby-%{pkgname}
 Version:	2.13.0
-Release:	3
+Release:	4
 License:	MIT
 Group:		Development/Languages
 Source0:	http://rubygems.org/downloads/%{pkgname}-%{version}.gem
