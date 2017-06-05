@@ -2,18 +2,18 @@
 Summary:	Behaviour driven development (BDD) framework for Ruby
 Summary(pl.UTF-8):	Szkielet do programowania sterowanego zachowaniem (BDD) dla języka Ruby
 Name:		ruby-%{pkgname}
-Version:	2.13.0
-Release:	4
+Version:	2.14.1
+Release:	1
 License:	MIT
 Group:		Development/Languages
 Source0:	http://rubygems.org/downloads/%{pkgname}-%{version}.gem
-# Source0-md5:	72bb51053e955418b9e06818729ab164
+# Source0-md5:	7c19d29dd6ae0d04bc79627c00b92345
 URL:		http://rspec.info/
 BuildRequires:	rpm-rubyprov
 BuildRequires:	rpmbuild(macros) >= 1.656
-Requires:	ruby-rspec-core >= %{version}
-Requires:	ruby-rspec-expectations >= %{version}
-Requires:	ruby-rspec-mocks >= %{version}
+Requires:	ruby-rspec-core >= 2.14.0
+Requires:	ruby-rspec-expectations >= 2.14.0
+Requires:	ruby-rspec-mocks >= 2.14.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
