@@ -11,9 +11,6 @@ Source0:	http://rubygems.org/downloads/%{pkgname}-%{version}.gem
 URL:		http://rspec.info/
 BuildRequires:	rpm-rubyprov
 BuildRequires:	rpmbuild(macros) >= 1.656
-Requires:	ruby-rspec-core >= 2.14.0
-Requires:	ruby-rspec-expectations >= 2.14.0
-Requires:	ruby-rspec-mocks >= 2.14.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
